@@ -3,6 +3,8 @@ import { Button } from "react-bootstrap";
 import styled from "styled-components";
 import Footer from "../component/landing/Footer";
 import Navbar from "../component/landing/Navbar";
+// import { __getCheckout } from "../../redux/modules/slice";
+// import { useDispatch, useSelector } from "react-redux";
 
 const ContentSection = styled.div`
   display: grid;
@@ -72,24 +74,24 @@ const CheckoutPage = () => {
     }
   }, [quantity]);
 
-  const { checkout, isLoading, error } = useSelector((state) => state.details);
-	const dispatch = useDispatch();
+//   const { checkout, isLoading, error } = useSelector((state) => state.details);
+// 	const dispatch = useDispatch();
 
-	useEffect(() => {
-		dispatch(__getCheckout());
-	}, [dispatch]);
+// 	useEffect(() => {
+// 		dispatch(__getCheckout());
+// 	}, [dispatch]);
 
-	if (isLoading) {
-		return <h1>Loading</h1>;
-	}
+// 	if (isLoading) {
+// 		return <h1>Loading</h1>;
+// 	}
 
-	if (error) {
-		return (
-			<div className="section-recomendation container my-5">
-				<h1>Error in requesting data...</h1>
-			</div>
-		);
-	}
+// 	if (error) {
+// 		return (
+// 			<div className="section-recomendation container my-5">
+// 				<h1>Error in requesting data...</h1>
+// 			</div>
+// 		);
+// 	}
 
   return (
     <>
